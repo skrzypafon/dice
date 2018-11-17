@@ -1,2 +1,2 @@
 # dice
-My first programe that imitates a simple dice game
+My first program that imitates a simple dice game
