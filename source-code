@@ -1,23 +1,32 @@
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class Kostka {
 
     public static void main(String args[]) {
         Scanner reader = new Scanner(System.in);
 
-        while (true) {
+
             System.out.println("Jaką kostką chcesz grać? Wpisz numer");
 
             int rodzajKostki = Integer.parseInt(reader.nextLine());
 
-            if (rodzajKostki == 6) {
+            while (true) {
+            if (rodzajKostki == 6 || rodzajKostki ==4) {
                 System.out.println("Gramy dalej. Rzucam kostką!");
-
-            } else {
-
-                System.out.println("Kostka o tylu ścianach nie istnieje! Spróbuj jeszcze raz");
+                Random generator = new Random();
+                int random = generator.nextInt(6) +1;
+                System.out.println(random);
+                
+                break;
+            }   else {
+                System.out.println("Kostka o tylu ścianach nie istnieje! Podaj inny numer");
             }
+
+            }
+
+
         }
+
     }
-}
